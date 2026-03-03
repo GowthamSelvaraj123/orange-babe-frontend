@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const HealthSafety = () => {
     const items = [
@@ -20,9 +20,8 @@ const HealthSafety = () => {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-l border-t border-pink-100 mb-10">
                     {items.map((item, idx) => (
-                        <Link
-                            key={idx}
-                            to="/products"
+                        <Link key={idx}
+                            href="/products"
                             className="bg-white group p-4 border-r border-b border-pink-100 hover:bg-orange-50/20 transition-all flex flex-col items-center"
                         >
                             <div className="aspect-square w-full mb-4 overflow-hidden rounded-md">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const OccasionWear = () => {
     return (
@@ -8,8 +8,7 @@ const OccasionWear = () => {
                     Occasion Wear
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Link
-                        to="/products"
+                    <Link href="/products"
                         className="group relative overflow-hidden rounded-sm border border-gray-100 shadow-sm aspect-[16/8] md:aspect-[16/9]"
                     >
                         <img src="/placeholder.svg" alt="Party Look" className="w-full h-full object-cover" />
@@ -23,8 +22,7 @@ const OccasionWear = () => {
                         </div>
                     </Link>
 
-                    <Link
-                        to="/products"
+                    <Link href="/products"
                         className="group relative overflow-hidden rounded-sm border border-gray-100 shadow-sm aspect-[16/8] md:aspect-[16/9]"
                     >
                         <img src="/placeholder.svg" alt="Ethnic Ready" className="w-full h-full object-cover" />

@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { Facebook, Instagram, Twitter, Youtube, Linkedin, ChevronDown, ArrowUp } from "lucide-react";
 
 const Footer = () => {
@@ -51,13 +53,13 @@ const Footer = () => {
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Categories</h4>
             <ul className="space-y-1 mb-8">
               {categories.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Company Info</h4>
             <ul className="space-y-1">
               {companyInfo.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
           </div>
@@ -67,13 +69,13 @@ const Footer = () => {
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">FirstCry Parenting</h4>
             <ul className="space-y-1 mb-8">
               {parenting.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Regional Parenting</h4>
             <ul className="space-y-1">
               {regionalParenting.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
           </div>
@@ -83,13 +85,13 @@ const Footer = () => {
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Shipping & Policies</h4>
             <ul className="space-y-1 mb-8">
               {shippingPolicies.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Payment Method</h4>
             <ul className="space-y-1 mb-8">
               {paymentMethods.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Connect With Us</h4>
@@ -107,13 +109,13 @@ const Footer = () => {
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Our Apps</h4>
             <ul className="space-y-1 mb-8">
               {appLinks.map((item, idx) => (
-                <li key={idx}><Link to="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
+                <li key={idx}><Link href="#" className="text-[11px] text-gray-500 hover:text-orange-500">{item}</Link></li>
               ))}
             </ul>
             <h4 className="font-bold text-xs text-gray-700 uppercase mb-4 tracking-tighter">Shop International</h4>
             <ul className="space-y-1">
-              <li><Link to="#" className="text-[11px] text-gray-500">FirstCry UAE</Link></li>
-              <li><Link to="#" className="text-[11px] text-gray-500">FirstCry KSA</Link></li>
+              <li><Link href="#" className="text-[11px] text-gray-500">FirstCry UAE</Link></li>
+              <li><Link href="#" className="text-[11px] text-gray-500">FirstCry KSA</Link></li>
             </ul>
           </div>
 
@@ -173,11 +175,11 @@ const Footer = () => {
 
       {/* Bottom Sticky Nav */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3 px-4 z-50 flex items-center justify-center gap-4 md:gap-8 overflow-x-auto no-scrollbar shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
-        <Link to="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Shortlist</Link>
-        <Link to="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Quick Re-Order</Link>
-        <Link to="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Track Order</Link>
-        <Link to="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Become a Franchisee</Link>
-        <Link to="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Preschool Admissions</Link>
+        <Link href="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Shortlist</Link>
+        <Link href="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Quick Re-Order</Link>
+        <Link href="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Track Order</Link>
+        <Link href="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Become a Franchisee</Link>
+        <Link href="#" className="text-[10px] font-bold text-gray-600 hover:text-orange-500 whitespace-nowrap">Preschool Admissions</Link>
       </div>
 
       <style dangerouslySetInnerHTML={{

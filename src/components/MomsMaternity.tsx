@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const MomsMaternity = () => {
     const mainCategories = [
@@ -38,7 +38,7 @@ const MomsMaternity = () => {
                 {/* Grid 1 */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mb-2">
                     {mainCategories.map((item, idx) => (
-                        <Link key={idx} to="/products" className="relative aspect-video md:aspect-square group overflow-hidden">
+                        <Link key={idx} href="/products" className="relative aspect-video md:aspect-square group overflow-hidden">
                             <img src={item.image} alt={item.name} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <p className="absolute bottom-4 left-0 right-0 text-center text-white font-bold text-[10px] md:text-xs px-2 uppercase tracking-tighter">
@@ -51,7 +51,7 @@ const MomsMaternity = () => {
                 {/* Grid 2 */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
                     {subCategories.map((item, idx) => (
-                        <Link key={idx} to="/products" className="relative aspect-video md:aspect-square group overflow-hidden">
+                        <Link key={idx} href="/products" className="relative aspect-video md:aspect-square group overflow-hidden">
                             <img src={item.image} alt={item.name} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <p className="absolute bottom-4 left-0 right-0 text-center text-white font-bold text-[10px] md:text-xs px-2 uppercase tracking-tighter">

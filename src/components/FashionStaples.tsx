@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const FashionStaples = () => {
     const categories = [
@@ -20,9 +20,8 @@ const FashionStaples = () => {
                 </h2>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {categories.map((cat, idx) => (
-                        <Link
-                            key={idx}
-                            to={`/products?category=${cat.title}`}
+                        <Link key={idx}
+                            href={`/products?category=${cat.title}`}
                             className="group relative overflow-hidden rounded-md border border-gray-100 shadow-sm aspect-square md:aspect-[4/5]"
                         >
                             <img

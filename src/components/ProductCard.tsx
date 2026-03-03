@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { ShoppingCart, Star, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/data/products";
@@ -16,7 +18,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="group bg-card rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
       <div className="relative overflow-hidden">
-        <Link to={`/product/${product.id}`}>
+        <Link href={`/product/${product.id}`}>
           <img
             src={product.image}
             alt={product.name}
@@ -48,7 +50,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </div>
 
       <div className="p-4">
-        <Link to={`/product/${product.id}`}>
+        <Link href={`/product/${product.id}`}>
           <h3 className="font-semibold text-sm line-clamp-2 hover:text-primary transition-colors mb-1">
             {product.name}
           </h3>

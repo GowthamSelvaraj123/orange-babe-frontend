@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const StrideStyle = () => {
     return (
@@ -9,8 +9,7 @@ const StrideStyle = () => {
                 </h2>
                 <div className="flex flex-col md:flex-row gap-4 overflow-hidden rounded-md border border-gray-100 shadow-sm">
                     {/* Accessories Side */}
-                    <Link
-                        to="/products?category=Accessories"
+                    <Link href="/products?category=Accessories"
                         className="flex-1 group relative aspect-[21/9] md:aspect-auto"
                     >
                         <img src="/placeholder.svg" alt="Accessories" className="w-full h-full object-cover" />
@@ -26,8 +25,7 @@ const StrideStyle = () => {
                     </Link>
 
                     {/* Footwear Side */}
-                    <Link
-                        to="/products?category=Footwear"
+                    <Link href="/products?category=Footwear"
                         className="flex-1 group relative aspect-[21/9] md:aspect-auto"
                     >
                         <img src="/placeholder.svg" alt="Footwear" className="w-full h-full object-cover" />

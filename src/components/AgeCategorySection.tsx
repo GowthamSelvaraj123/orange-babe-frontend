@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ageGroups } from "@/data/products";
 
 const colorClasses: Record<string, string> = {
@@ -18,9 +18,8 @@ const AgeCategorySection = () => {
       </div>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
         {ageGroups.map((group) => (
-          <Link
-            key={group.id}
-            to={`/products?age=${group.id}`}
+          <Link key={group.id}
+            href={`/products?age=${group.id}`}
             className="group flex flex-col items-center gap-3"
           >
             <div

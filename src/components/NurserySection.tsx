@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const NurserySection = () => {
     const categories = [
@@ -33,7 +33,7 @@ const NurserySection = () => {
                 {/* Grid */}
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
                     {categories.map((item, idx) => (
-                        <Link key={idx} to="/products" className="relative aspect-video md:aspect-square group overflow-hidden border border-gray-100">
+                        <Link key={idx} href="/products" className="relative aspect-video md:aspect-square group overflow-hidden border border-gray-100">
                             <img src={item.image} alt={item.name} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
                             <p className="absolute bottom-4 left-0 right-0 text-center text-white font-bold text-[10px] md:text-sm px-2 uppercase shadow-sm">

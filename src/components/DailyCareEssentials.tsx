@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface CategoryItem {
     name: string;
@@ -50,9 +50,8 @@ const CategoryShowcase = ({ bannerTitle, bannerBg, subSections, showShopNow = tr
                         )}
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-200 border border-gray-200">
                             {sub.items.map((item, itemIdx) => (
-                                <Link
-                                    key={itemIdx}
-                                    to="/products"
+                                <Link key={itemIdx}
+                                    href="/products"
                                     className="bg-white group p-2 flex flex-col items-center hover:shadow-inner transition-all"
                                 >
                                     <div className="aspect-square w-full overflow-hidden mb-2">

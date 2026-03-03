@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const BrandStrip = () => {
     // Top Brands logos - in a real app these would be actual logo SVGs/Images
@@ -18,9 +18,8 @@ const BrandStrip = () => {
 
                 <div className="flex items-center gap-10 overflow-x-auto no-scrollbar px-6">
                     {brands.map((brand, idx) => (
-                        <Link
-                            key={idx}
-                            to={`/products?brand=${brand}`}
+                        <Link key={idx}
+                            href={`/products?brand=${brand}`}
                             className="shrink-0 text-[10px] md:text-sm font-bold text-gray-400 hover:text-orange-500 uppercase tracking-widest whitespace-nowrap"
                         >
                             {/* In a real app, this would be an <img src={brandLogo} /> */}
@@ -42,7 +41,7 @@ const BrandStrip = () => {
 const FranchiseBanner = () => {
     return (
         <section className="container mx-auto px-4 mb-10">
-            <Link to="/franchise" className="block relative w-full aspect-[21/6] md:aspect-[21/4] rounded-md overflow-hidden shadow-sm group">
+            <Link href="/franchise" className="block relative w-full aspect-[21/6] md:aspect-[21/4] rounded-md overflow-hidden shadow-sm group">
                 <img src="/placeholder.svg" alt="Franchise Opportunity" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-green-900/40 flex items-center p-8 md:p-16">
                     <div className="max-w-xl text-white">

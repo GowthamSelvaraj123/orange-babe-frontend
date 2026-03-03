@@ -6,7 +6,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const BoutiquesSection = () => {
     // Placeholder data for boutiques
@@ -120,7 +120,7 @@ const BoutiquesSection = () => {
 
                 {/* View All Button */}
                 <div className="mt-10 flex justify-center">
-                    <Link to="/products" className="w-full max-w-4xl">
+                    <Link href="/products" className="w-full max-w-4xl">
                         <Button variant="outline" className="w-full py-6 text-sm font-bold border-gray-200 text-gray-600 hover:bg-gray-50 uppercase tracking-widest shadow-sm">
                             View All Boutiques
                         </Button>

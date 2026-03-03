@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const PersonalCare = () => {
     const items = [
@@ -26,9 +26,8 @@ const PersonalCare = () => {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-l border-t border-gray-100">
                     {items.map((item, idx) => (
-                        <Link
-                            key={idx}
-                            to="/products"
+                        <Link key={idx}
+                            href="/products"
                             className="bg-white group p-4 border-r border-b border-gray-100 hover:shadow-inner hover:bg-pink-50/10 transition-all flex flex-col items-center"
                         >
                             <div className="aspect-square w-full mb-4 overflow-hidden rounded-md">

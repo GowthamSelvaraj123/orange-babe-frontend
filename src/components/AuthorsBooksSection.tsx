@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const AuthorsBooksSection = () => {
     const authors = [
@@ -83,7 +83,7 @@ const AuthorsBooksSection = () => {
                 {/* Sports & Gadgets Grid */}
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-gray-200 border border-gray-200 mb-12">
                     {[...sportsItems, ...gadgetsItems].map((item, idx) => (
-                        <Link key={idx} to="/products" className="bg-[#fff4e6] group p-2 md:p-4 flex flex-col items-center hover:bg-white transition-all">
+                        <Link key={idx} href="/products" className="bg-[#fff4e6] group p-2 md:p-4 flex flex-col items-center hover:bg-white transition-all">
                             <div className="aspect-square w-full mb-2 overflow-hidden">
                                 <img src={item.image} alt={item.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
                             </div>
@@ -110,7 +110,7 @@ const AuthorsBooksSection = () => {
                 {/* Book Categories Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-6 border border-gray-100 mb-6 gap-px bg-gray-100">
                     {bookCategories.map((cat, idx) => (
-                        <Link key={idx} to="/products" className="bg-white group p-4 flex flex-col items-center hover:bg-gray-50 transition-all">
+                        <Link key={idx} href="/products" className="bg-white group p-4 flex flex-col items-center hover:bg-gray-50 transition-all">
                             <div className="aspect-square w-full mb-3 overflow-hidden">
                                 <img src={cat.image} alt={cat.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
                             </div>
@@ -123,7 +123,7 @@ const AuthorsBooksSection = () => {
 
                 {/* Specialty Books Row */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
-                    <Link to="/products" className="relative group overflow-hidden bg-[#fdf2f2] border border-pink-100 flex flex-col items-center">
+                    <Link href="/products" className="relative group overflow-hidden bg-[#fdf2f2] border border-pink-100 flex flex-col items-center">
                         <div className="p-8 aspect-[4/3] w-full flex items-center justify-center">
                             <img src="/placeholder.svg" alt="Board Books" className="max-h-full max-w-full object-contain" />
                         </div>
@@ -132,7 +132,7 @@ const AuthorsBooksSection = () => {
                         </div>
                     </Link>
 
-                    <Link to="/products" className="relative group overflow-hidden bg-[#fff9f9] border border-pink-100 flex flex-col items-center">
+                    <Link href="/products" className="relative group overflow-hidden bg-[#fff9f9] border border-pink-100 flex flex-col items-center">
                         <div className="p-8 aspect-[4/3] w-full flex items-center justify-center">
                             <img src="/placeholder.svg" alt="Pregnancy & Parenting" className="max-h-full max-w-full object-contain" />
                         </div>
@@ -142,19 +142,19 @@ const AuthorsBooksSection = () => {
                     </Link>
 
                     <div className="flex flex-col gap-1">
-                        <Link to="/products" className="bg-[#fcf7ff] border border-purple-100 p-4 flex justify-between items-center group flex-1">
+                        <Link href="/products" className="bg-[#fcf7ff] border border-purple-100 p-4 flex justify-between items-center group flex-1">
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 border-2 border-orange-200 rounded-sm flex items-center justify-center text-orange-400 font-bold">ABC</div>
                                 <span className="font-bold text-gray-700 uppercase text-xs">Pre-School ›</span>
                             </div>
                         </Link>
-                        <Link to="/products" className="bg-[#ffffeb] border border-yellow-100 p-4 flex justify-between items-center group flex-1">
+                        <Link href="/products" className="bg-[#ffffeb] border border-yellow-100 p-4 flex justify-between items-center group flex-1">
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 border-2 border-green-200 rounded-sm flex items-center justify-center text-green-400 font-bold">🌐</div>
                                 <span className="font-bold text-gray-700 uppercase text-xs">Encyclopedia ›</span>
                             </div>
                         </Link>
-                        <Link to="/products" className="bg-[#f1fbff] border border-blue-100 p-4 flex justify-between items-center group flex-1">
+                        <Link href="/products" className="bg-[#f1fbff] border border-blue-100 p-4 flex justify-between items-center group flex-1">
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 border-2 border-blue-200 rounded-sm flex items-center justify-center text-blue-400 font-bold">📚</div>
                                 <span className="font-bold text-gray-700 uppercase text-xs">Fact Books ›</span>

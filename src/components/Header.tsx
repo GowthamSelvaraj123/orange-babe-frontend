@@ -1,23 +1,27 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { ShoppingCart, Search, Heart, MapPin, ChevronDown } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Input } from "@/components/ui/input";
 
-import logo from "@/assets/logo.jpeg";
+
 
 const Header = () => {
   const { totalItems } = useCart();
+
+
 
   return (
     <header className="w-full bg-white border-b border-gray-200">
       {/* Top Section */}
       <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link to="/" className="shrink-0">
+        <Link href="/" className="shrink-0">
           <img
-            src={logo}
+            src="/logo.jpeg"
             alt="OrangeBabe Logo"
-            className="h-10 md:h-10 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </Link>
 
@@ -52,7 +56,7 @@ const Header = () => {
             <span className="text-[12px] hidden lg:block">Shortlist</span>
           </div>
 
-          <Link to="/cart" className="flex items-center gap-1 ml-2 group relative">
+          <Link href="/cart" className="flex items-center gap-1 ml-2 group relative">
             <div className="relative">
               <ShoppingCart className="h-7 w-7 text-gray-500 group-hover:text-orange-500" />
               <span className="absolute -top-1.5 -right-1.5 bg-orange-500 text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
@@ -90,7 +94,7 @@ const Header = () => {
             ].map((cat) => (
               <Link
                 key={cat}
-                to={`/products?category=${cat}`}
+                href={`/products?category=${cat}`}
                 className="text-[11px] font-bold text-white hover:text-white transition-colors whitespace-nowrap uppercase px-1"
               >
                 {cat}
